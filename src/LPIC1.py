@@ -2571,6 +2571,318 @@ class QuestionBank:
                 "correct": 3,
                 "explanation": "Vários sistemas para montagem automática: udisks, autofs, systemd."
             },
+                    {
+            "question": "Qual comando mostra processos filhos de um processo específico?",
+            "type": "multiple",
+            "options": ["ps --ppid PID", "pstree -p PID", "pgrep -P PID", "Todas as anteriores"],
+            "correct": 3,
+            "explanation": "Várias formas de ver processos filhos: ps --ppid, pstree, pgrep -P."
+        },
+        {
+            "question": "Digite o comando para ver consumo de swap por processo:",
+            "type": "text",
+            "correct": ["top (coluna SWAP)", "ps aux --sort -vsz"],
+            "explanation": "top mostra SWAP. ps aux ordenado por VSZ (Virtual Memory Size)."
+        },
+        {
+            "question": "Qual comando mata processos por nome?",
+            "type": "multiple",
+            "options": ["pkill", "killall", "kill -n", "a e b"],
+            "correct": 3,
+            "explanation": "pkill nome e killall nome terminam processos pelo nome."
+        },
+        {
+            "question": "Digite o comando para enviar sinal HUP para processo:",
+            "type": "text",
+            "correct": ["kill -HUP", "kill -1"],
+            "explanation": "SIGHUP (1) geralmente faz processo recarregar configurações."
+        },
+        {
+            "question": "Qual comando mostra sinais disponíveis?",
+            "type": "multiple",
+            "options": ["kill -l", "signal -l", "man signal", "siglist"],
+            "correct": 0,
+            "explanation": "kill -l lista todos os sinais disponíveis."
+        },
+        {
+            "question": "Digite o comando para pausar processo em foreground:",
+            "type": "text",
+            "correct": ["Ctrl+Z"],
+            "explanation": "Ctrl+Z envia SIGTSTP, pausando processo em foreground."
+        },
+        {
+            "question": "Qual comando continua processo pausado em background?",
+            "type": "multiple",
+            "options": ["bg", "fg", "continue", "resume"],
+            "correct": 0,
+            "explanation": "bg continua processo pausado em background."
+        },
+        {
+            "question": "Digite o comando para trazer job para foreground:",
+            "type": "text",
+            "correct": ["fg", "fg %jobnumber"],
+            "explanation": "fg sem argumento traz job mais recente, fg %n traz job específico."
+        },
+        {
+            "question": "Qual variável mostra PID do shell atual?",
+            "type": "multiple",
+            "options": ["$$", "$PPID", "$!", "$?"],
+            "correct": 0,
+            "explanation": "$$ contém PID do processo shell atual."
+        },
+        {
+            "question": "Digite o comando para ver jobs ativos no shell:",
+            "type": "text",
+            "correct": ["jobs"],
+            "explanation": "jobs lista jobs (processos) ativos no shell atual."
+        },
+        {
+            "question": "Qual comando executa processo imune a logout?",
+            "type": "multiple",
+            "options": ["nohup", "disown", "setsid", "Todas as anteriores"],
+            "correct": 3,
+            "explanation": "nohup, disown e setsid mantêm processos rodando após logout."
+        },
+        {
+            "question": "Digite o comando para definir prioridade alta (nice negativo):",
+            "type": "text",
+            "correct": ["nice -n -20", "sudo nice -n -20"],
+            "explanation": "nice -n -20 comando (normalmente precisa de root para nice negativo)."
+        },
+        {
+            "question": "Qual comando altera prioridade de processo existente?",
+            "type": "multiple",
+            "options": ["renice", "nice -p", "chprio", "setpriority"],
+            "correct": 0,
+            "explanation": "renice altera nice value de processo já rodando."
+        },
+        {
+            "question": "Digite o comando para buscar texto em arquivos recursivamente:",
+            "type": "text",
+            "correct": ["grep -r", "grep -R"],
+            "explanation": "grep -r ou -R busca recursivamente em diretórios."
+        },
+        {
+            "question": "Qual opção do grep mostra número da linha?",
+            "type": "multiple",
+            "options": ["-n", "-l", "-c", "-v"],
+            "correct": 0,
+            "explanation": "grep -n mostra número da linha onde padrão foi encontrado."
+        },
+        {
+            "question": "Digite o comando para buscar arquivos que CONTÊM texto específico:",
+            "type": "text",
+            "correct": ["grep -l", "grep --files-with-matches"],
+            "explanation": "grep -l lista apenas nomes de arquivos que contêm o padrão."
+        },
+        {
+            "question": "Qual comando busca texto ignorando maiúsculas/minúsculas?",
+            "type": "multiple",
+            "options": ["grep -i", "grep --ignore-case", "igrep", "a e b"],
+            "correct": 3,
+            "explanation": "grep -i ou --ignore-case busca case-insensitive."
+        },
+        {
+            "question": "Digite o comando para contar ocorrências de padrão:",
+            "type": "text",
+            "correct": ["grep -c"],
+            "explanation": "grep -c conta número de linhas que correspondem ao padrão."
+        },
+        {
+            "question": "Qual comando busca expressões regulares estendidas?",
+            "type": "multiple",
+            "options": ["grep -E", "egrep", "Ambas", "Nenhuma"],
+            "correct": 2,
+            "explanation": "grep -E e egrep são equivalentes para regex estendidas."
+        },
+        {
+            "question": "Digite o comando para mostrar contexto ao redor da busca:",
+            "type": "text",
+            "correct": ["grep -A -B -C", "grep --context"],
+            "explanation": "-A linhas após, -B linhas antes, -C contexto (ambos)."
+        },
+        {
+            "question": "Qual editor de texto padrão em sistemas Linux?",
+            "type": "multiple",
+            "options": ["vi/vim", "nano", "emacs", "ed"],
+            "correct": 0,
+            "explanation": "vi (ou vim) é editor padrão presente em praticamente todas distros."
+        },
+        {
+            "question": "Digite o comando para abrir arquivo no vi:",
+            "type": "text",
+            "correct": ["vi arquivo", "vim arquivo"],
+            "explanation": "vi arquivo ou vim arquivo abre editor vi."
+        },
+        {
+            "question": "Qual modo do vi permite inserir texto?",
+            "type": "multiple",
+            "options": ["Insert mode", "Command mode", "Visual mode", "Ex mode"],
+            "correct": 0,
+            "explanation": "Insert mode (i, I, a, A, o, O) permite inserção de texto."
+        },
+        {
+            "question": "Digite o comando para sair do vi sem salvar:",
+            "type": "text",
+            "correct": [":q!", "quit!"],
+            "explanation": ":q! força saída sem salvar alterações."
+        },
+        {
+            "question": "Qual comando salva e sai no vi?",
+            "type": "multiple",
+            "options": [":wq", "ZZ", ":x", "Todas as anteriores"],
+            "correct": 3,
+            "explanation": ":wq, ZZ (Shift+zz), e :x salvam e saem."
+        },
+        {
+            "question": "Digite o comando para deletar linha no vi:",
+            "type": "text",
+            "correct": ["dd", ":d"],
+            "explanation": "dd (modo normal) deleta linha atual."
+        },
+        {
+            "question": "Como copiar linha no vi?",
+            "type": "multiple",
+            "options": ["yy", "Y", "Ambas", "Nenhuma"],
+            "correct": 2,
+            "explanation": "yy ou Y copiam linha atual (yank)."
+        },
+        {
+            "question": "Digite o comando para colar no vi:",
+            "type": "text",
+            "correct": ["p", "P"],
+            "explanation": "p cola após cursor, P cola antes do cursor."
+        },
+        {
+            "question": "Qual comundo busca texto no vi?",
+            "type": "multiple",
+            "options": ["/padrão", "?padrão", "grep dentro do vi", "a e b"],
+            "correct": 3,
+            "explanation": "/ busca para frente, ? busca para trás."
+        },
+        {
+            "question": "Digite o comando para desfazer no vi:",
+            "type": "text",
+            "correct": ["u", ":undo"],
+            "explanation": "u desfaz última alteração. Ctrl+r refaz."
+        },
+        {
+            "question": "Como criar script shell básico?",
+            "type": "multiple",
+            "options": ["#!/bin/bash na primeira linha", "chmod +x no arquivo", "Ambas", "Nenhuma"],
+            "correct": 2,
+            "explanation": "Shebang (#!) define interpretador. chmod +x torna executável."
+        },
+        {
+            "question": "Digite o shebang para script bash:",
+            "type": "text",
+            "correct": ["#!/bin/bash", "#!/usr/bin/env bash"],
+            "explanation": "#!/bin/bash ou #!/usr/bin/env bash na primeira linha."
+        },
+        {
+            "question": "Qual variável contém argumentos passados ao script?",
+            "type": "multiple",
+            "options": ["$1, $2, $3...", "$@", "$*", "Todas as anteriores"],
+            "correct": 3,
+            "explanation": "$1 primeiro argumento, $@ todos argumentos como array, $* como string."
+        },
+        {
+            "question": "Digite o comando para ver número de argumentos:",
+            "type": "text",
+            "correct": ["$#"],
+            "explanation": "$# contém número de argumentos passados ao script."
+        },
+        {
+            "question": "Qual comando testa condições em shell script?",
+            "type": "multiple",
+            "options": ["test", "[ ]", "[[ ]]", "Todas as anteriores"],
+            "correct": 3,
+            "explanation": "test, [ ] (mais portável), [[ ]] (bash, mais recursos)."
+        },
+        {
+            "question": "Digite a estrutura if básica em bash:",
+            "type": "text",
+            "correct": ["if [ condição ]; then comando; fi"],
+            "explanation": "if [ condição ]; then comando; fi (espaços importantes!)."
+        },
+        {
+            "question": "Como fazer loop for em shell script?",
+            "type": "multiple",
+            "options": ["for i in lista; do comando; done", "for ((i=0; i<10; i++)); do", "Ambas", "Nenhuma"],
+            "correct": 2,
+            "explanation": "Duas sintaxes: for i in ... e estilo C for ((...))."
+        },
+        {
+            "question": "Digite o comando para sair do script com código de erro:",
+            "type": "text",
+            "correct": ["exit 1", "exit código"],
+            "explanation": "exit 0 = sucesso, exit 1 (ou outro) = erro."
+        },
+        {
+            "question": "Qual comando cria usuário no Linux?",
+            "type": "multiple",
+            "options": ["useradd", "adduser", "Ambas", "Nenhuma"],
+            "correct": 2,
+            "explanation": "useradd (baixo nível), adduser (interativo, mais amigável)."
+        },
+        {
+            "question": "Digite o comando para deletar usuário:",
+            "type": "text",
+            "correct": ["userdel", "deluser"],
+            "explanation": "userdel remove usuário. -r remove diretório home também."
+        },
+        {
+            "question": "Qual arquivo contém informações de usuários?",
+            "type": "multiple",
+            "options": ["/etc/passwd", "/etc/shadow", "/etc/group", "Todas as anteriores"],
+            "correct": 3,
+            "explanation": "passwd (info básica), shadow (senhas), group (grupos)."
+        },
+        {
+            "question": "Digite o comando para alterar senha de usuário:",
+            "type": "text",
+            "correct": ["passwd", "passwd usuário"],
+            "explanation": "passwd altera própria senha, passwd usuário (root) altera de outro."
+        },
+        {
+            "question": "Qual comando muda dono de arquivo?",
+            "type": "multiple",
+            "options": ["chown", "chown usuário:grupo", "chgrp", "a e b"],
+            "correct": 3,
+            "explanation": "chown muda dono e opcionalmente grupo. chgrp muda apenas grupo."
+        },
+        {
+            "question": "Digite o comando para ver informações de usuário logado:",
+            "type": "text",
+            "correct": ["id", "whoami"],
+            "explanation": "id mostra UID, GID, grupos. whoami mostra nome do usuário."
+        },
+        {
+            "question": "Como adicionar usuário a grupo secundário?",
+            "type": "multiple",
+            "options": ["usermod -aG grupo usuário", "gpasswd -a usuário grupo", "Ambas", "Nenhuma"],
+            "correct": 2,
+            "explanation": "usermod -aG ou gpasswd -a adicionam usuário a grupo existente."
+        },
+        {
+            "question": "Digite o comando para ver grupos do usuário:",
+            "type": "text",
+            "correct": ["groups", "id -Gn"],
+            "explanation": "groups usuário ou id -Gn mostra grupos do usuário."
+        },
+        {
+            "question": "Qual arquivo define política de senhas?",
+            "type": "multiple",
+            "options": ["/etc/login.defs", "/etc/pam.d/system-auth", "/etc/security/pwquality.conf", "Todas as anteriores"],
+            "correct": 3,
+            "explanation": "Vários arquivos controlam política de senhas no Linux."
+        },
+        {
+            "question": "Digite o comando para bloquear conta de usuário:",
+            "type": "text",
+            "correct": ["passwd -l", "usermod -L"],
+            "explanation": "passwd -l ou usermod -L bloqueiam conta (lock)."
+        }
         ]
     
     def get_random_questions(self, topic: str, num: int = 5) -> List[Dict]:
