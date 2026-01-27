@@ -103,7 +103,7 @@ class QuestionBank:
             {
                 "question": "Onde ficam arquivos de dispositivos de bloco?",
                 "type": "multiple",
-                "options": ["/dev", /proc", "/sys", "/media"],
+                "options":["/dev", "/proc", "/sys", "/media"],
                 "correct": 0,
                 "explanation": "/dev contém arquivos especiais que representam dispositivos."
             },
@@ -384,7 +384,7 @@ class QuestionBank:
             {
                 "question": "Qual diretório contém logs variáveis?",
                 "type": "multiple",
-                "options": ["/var", "/tmp", /opt", "/usr"],
+                "options": ["/var", "/tmp", "/opt", "/usr"],
                 "correct": 0,
                 "explanation": "/var contém logs, spools, caches que crescem com o tempo."
             },
@@ -536,7 +536,7 @@ class QuestionBank:
             {
                 "question": "Onde GRUB2 armazena módulos?",
                 "type": "multiple",
-                "options": ["/boot/grub", "/usr/lib/grub", /lib/grub", "/etc/grub.d"],
+                "options": ["/boot/grub", "/usr/lib/grub", "/lib/grub", "/etc/grub.d"],
                 "correct": 0,
                 "explanation": "/boot/grub/ contém módulos (*.mod) e arquivos de configuração."
             },
@@ -1018,7 +1018,7 @@ class QuestionBank:
             {
                 "question": "Como pausar processo em foreground?",
                 "type": "multiple",
-                "options": ["Ctrl+Z", "Ctrl+C", "Ctrl+D", "Ctrl+\"],
+                "options": ["Ctrl+Z", "Ctrl+C", "Ctrl+D", "Ctrl+barra"],
                 "correct": 0,
                 "explanation": "Ctrl+Z envia SIGTSTP, pausando processo. Ctrl+C envia SIGINT, terminando."
             },
@@ -1231,7 +1231,7 @@ class QuestionBank:
             {
                 "question": "Qual arquivo contém informações de processo?",
                 "type": "multiple",
-                "options": ["/proc/PID/", "/var/run/", /tmp/", "/dev/shm/"],
+                "options": ["/proc/PID/", "/var/run/", "/tmp/", "/dev/shm/"],
                 "correct": 0,
                 "explanation": "/proc/PID/ tem diretórios virtuais para cada processo com informações."
             },
